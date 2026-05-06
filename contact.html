@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>Contact | Break Frame Construction</title>
+<meta name="description" content="Contact Break Frame Construction for a free estimate on framing, trim, or exterior work in the Fort Worth and DFW area.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#DA9A40;--navy:#0B2147;--navy-dark:#070E1A;--navy-medium:#0B1F3B;--red:#B1120A;--off-white:#F9F9F9;--white:#ffffff;--text-dark:#0B1F3B;--text-mid:#545250;--border-gold:rgba(218,154,64,0.7);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.6;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+.btn-red{display:inline-block;background:var(--red);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.85rem 2rem;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;}
+.btn-red:hover{background:#8f0e08;}
+.eyebrow{display:block;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;}
+header{position:sticky;top:0;z-index:100;background:var(--off-white);border-bottom:1px solid #e5e5e5;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 2rem;max-width:1400px;margin:0 auto;}
+.logo{display:flex;align-items:center;gap:0.75rem;}
+.logo img{height:56px;width:auto;}
+nav{display:flex;align-items:center;gap:2.5rem;}
+nav a{font-weight:500;font-size:1rem;color:var(--text-dark);transition:color 0.2s;}
+nav a:hover,nav a.active{color:var(--gold);}
+.header-cta{flex-shrink:0;}
+.page-hero{position:relative;min-height:300px;display:flex;align-items:center;background-image:url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/697683d529dcf572b65be695.jpg');background-size:cover;background-position:center;background-attachment:fixed;}
+.page-hero::before{content:'';position:absolute;inset:0;background:rgba(7,14,26,0.68);}
+.page-hero-content{position:relative;z-index:1;padding:4rem 2rem 4rem 6rem;}
+.page-hero-content h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--white);line-height:1.15;}
+.page-hero-content p{font-size:1.05rem;color:rgba(255,255,255,0.82);margin-top:0.75rem;max-width:540px;}
+.contact-main{padding:6rem 2rem;background:var(--white);}
+.contact-main-inner{max-width:900px;margin:0 auto;}
+.contact-main-header{text-align:center;margin-bottom:3.5rem;}
+.contact-main-header h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:var(--text-dark);margin-bottom:0.75rem;}
+.contact-main-header p{color:var(--text-mid);font-size:1.05rem;line-height:1.7;}
+.contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.contact-card{background:var(--off-white);border:2px solid var(--border-gold);border-radius:12px;padding:3rem 2rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s,background 0.2s;}
+.contact-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.1);background:var(--white);}
+.contact-card-icon{display:flex;align-items:center;justify-content:center;width:64px;height:64px;background:var(--navy);border-radius:50%;margin:0 auto 1.5rem;}
+.contact-card-icon svg{color:var(--gold);}
+.contact-card h3{font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mid);margin-bottom:0.75rem;}
+.contact-card a.contact-link{display:block;font-size:1.35rem;font-weight:800;color:var(--text-dark);transition:color 0.2s;line-height:1.3;}
+.contact-card a.contact-link:hover{color:var(--gold);}
+.contact-card p.sub{font-size:0.85rem;color:var(--text-mid);margin-top:0.5rem;}
+.service-area{background:var(--off-white);padding:5rem 2rem;}
+.service-area-inner{max-width:800px;margin:0 auto;text-align:center;}
+.service-area h2{font-size:clamp(1.75rem,3vw,2.25rem);font-weight:800;color:var(--text-dark);margin-bottom:1rem;}
+.service-area p{color:var(--text-mid);font-size:1rem;line-height:1.75;}
+.area-list{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-top:2rem;}
+.area-tag{background:var(--white);border:2px solid var(--border-gold);border-radius:6px;padding:0.5rem 1.25rem;font-size:0.85rem;font-weight:600;color:var(--text-dark);}
+.trust{background:var(--navy);padding:3.5rem 2rem;}
+.trust-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:2rem;}
+.trust-item{text-align:center;color:var(--white);}
+.trust-item strong{display:block;font-size:1.75rem;font-weight:800;color:var(--gold);}
+.trust-item span{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.75);}
+footer{background:var(--navy-dark);color:rgba(255,255,255,0.75);padding:4rem 2rem 2rem;}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.1);}
+.footer-brand strong{display:block;color:var(--white);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;}
+.footer-brand .tagline{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:1.25rem;}
+.footer-brand a{display:block;color:var(--gold);font-size:0.9rem;margin-bottom:0.4rem;transition:color 0.2s;}
+.footer-brand a:hover{color:var(--white);}
+.footer-col h4{color:var(--white);font-size:0.95rem;font-weight:700;margin-bottom:1.25rem;}
+.footer-col li{margin-bottom:0.65rem;}
+.footer-col li a{font-size:0.9rem;color:rgba(255,255,255,0.65);transition:color 0.2s;}
+.footer-col li a:hover{color:var(--gold);}
+.footer-bottom{max-width:1200px;margin:1.5rem auto 0;font-size:0.82rem;color:rgba(255,255,255,0.4);}
+@media(max-width:768px){.page-hero{background-attachment:scroll;}.contact-cards{grid-template-columns:1fr;}}
+@media(max-width:640px){.header-inner{flex-wrap:wrap;gap:0.75rem;}nav{gap:1.25rem;flex-wrap:wrap;}.page-hero-content{padding:3rem 1.5rem;}.footer-inner{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/69766a20c1fa0c70709738b6.png" alt="Break Frame Construction logo">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="header-cta"><a href="tel:8175181642" class="btn-red">Free Estimate</a></div>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="eyebrow">Get In Touch</span>
+    <h1>Contact Break Frame Construction</h1>
+    <p>Ready to discuss your project? Call or email — we'll get back to you same day.</p>
+  </div>
+</section>
+<section class="contact-main">
+  <div class="contact-main-inner">
+    <div class="contact-main-header">
+      <span class="eyebrow">Reach Out</span>
+      <h2>Let's Talk About Your Project</h2>
+      <p>We keep it simple — no contact forms, no runaround. Just call or email Joel directly and we'll get your estimate scheduled.</p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Phone</h3>
+        <a href="tel:8175181642" class="contact-link">(817) 518-1642</a>
+        <p class="sub">Call or text — Mon–Sat, 7am–6pm</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>Email</h3>
+        <a href="mailto:JR@Break-Frame.com" class="contact-link">JR@Break-Frame.com</a>
+        <p class="sub">We respond same business day</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-area">
+  <div class="service-area-inner">
+    <span class="eyebrow">Where We Work</span>
+    <h2>Serving the Dallas–Fort Worth Area</h2>
+    <p>Break Frame Construction takes on residential and commercial projects across the DFW Metroplex. If you're in the area, we'd love to work with you.</p>
+    <div class="area-list">
+      <span class="area-tag">Fort Worth</span>
+      <span class="area-tag">Dallas</span>
+      <span class="area-tag">Arlington</span>
+      <span class="area-tag">Keller</span>
+      <span class="area-tag">Southlake</span>
+      <span class="area-tag">Grapevine</span>
+      <span class="area-tag">Mansfield</span>
+      <span class="area-tag">North Richland Hills</span>
+      <span class="area-tag">Hurst / Euless / Bedford</span>
+    </div>
+  </div>
+</section>
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><strong>10+</strong><span>Years Experience</span></div>
+    <div class="trust-item"><strong>✓</strong><span>Licensed &amp; Insured</span></div>
+    <div class="trust-item"><strong>Same Day</strong><span>Response</span></div>
+    <div class="trust-item"><strong>DFW</strong><span>Service Area</span></div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>Break Frame Construction</strong>
+      <p class="tagline">Precision framing &amp; exterior trim — Fort Worth, TX</p>
+      <a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a>
+      <a href="tel:8175181642">(817) 518-1642</a>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:8175181642">(817) 518-1642</a></li>
+        <li><a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Break Frame Construction &middot; Fort Worth, TX &middot; All Rights Reserved</div>
+</footer>
+</body>
+    </html>
