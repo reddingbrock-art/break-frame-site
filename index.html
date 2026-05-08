@@ -9,11 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --gold: #DA9A40; --navy: #0B2147; --navy-dark: #070E1A; --navy-medium: #0B1F3B;
-      --red: #B1120A; --off-white: #F9F9F9; --white: #ffffff;
-      --text-dark: #0B1F3B; --text-mid: #545250; --border-gold: rgba(218,154,64,0.7);
+  <style>:root {
+      --gold: #DA9A40; --navy: #0B2147; --navy-dark: #070E1A;
+      --navy-medium: #0B1F3B; --red: #B1120A; --off-white: #F9F9F9;
+      --white: #ffffff; --text-dark: #0B1F3B; --text-mid: #545250;
+      --border-gold: rgba(218,154,64,0.7);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -21,6 +21,9 @@
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
+
+    /* UTILITY */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
     .btn-red { display: inline-block; background: var(--red); color: var(--white); font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.85rem 2rem; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; }
     .btn-red:hover { background: #8f0e08; }
     .btn-gold-outline { display: inline-block; background: transparent; color: var(--gold); font-family: 'Montserrat',sans-serif; font-weight: 600; font-size: 0.9rem; padding: 0.75rem 1.75rem; border: 2px solid var(--gold); border-radius: 4px; cursor: pointer; transition: background 0.2s, color 0.2s; }
@@ -28,25 +31,51 @@
     .btn-navy { display: inline-block; background: var(--navy-medium); color: var(--white); font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; padding: 0.85rem 2rem; border-radius: 6px; border: none; cursor: pointer; transition: background 0.2s; }
     .btn-navy:hover { background: var(--navy); }
     .eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+
+    /* HEADER */
     header { position: sticky; top: 0; z-index: 100; background: var(--off-white); border-bottom: 1px solid #e5e5e5; }
     .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 2rem; max-width: 1400px; margin: 0 auto; }
-    .logo { display: flex; align-items: center; gap: 0.75rem; }
+    .logo { display: flex; align-items: center; }
     .logo img { height: 56px; width: auto; }
     nav { display: flex; align-items: center; gap: 2.5rem; }
     nav a { font-weight: 500; font-size: 1rem; color: var(--text-dark); transition: color 0.2s; }
     nav a:hover, nav a.active { color: var(--gold); }
     .header-cta { flex-shrink: 0; }
-    .hero { position: relative; min-height: 620px; display: flex; align-items: center; background-image: url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 25px; height: 2px; background: var(--text-dark); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+
+    /* HERO with parallax */
+    .hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      background-image: url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/697683d529dcf572b65be695.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
     .hero::before { content: ''; position: absolute; inset: 0; background: rgba(7,14,26,0.62); }
     .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 5rem 2rem 5rem 6rem; }
     .hero-content h1 { font-size: clamp(2rem,4vw,3.2rem); font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 1.25rem; }
     .hero-content p { font-size: 1.05rem; color: rgba(255,255,255,0.88); margin-bottom: 2rem; max-width: 540px; }
+
+    /* ABOUT */
     .about { background: var(--white); padding: 6rem 2rem; }
     .about-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     .about-text h2 { font-size: clamp(1.75rem,3vw,2.5rem); font-weight: 800; color: var(--text-dark); line-height: 1.2; margin-bottom: 1.25rem; }
     .about-text p { font-size: 1rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 2rem; }
     .about-image img { width: 100%; height: 420px; object-fit: cover; border-radius: 4px; }
-    .services { position: relative; padding: 6rem 2rem; background-image: url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg'); background-size: cover; background-position: center; background-attachment: fixed; }
+
+    /* SERVICES */
+    .services {
+      position: relative;
+      padding: 6rem 2rem;
+      background-image: url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
     .services::before { content: ''; position: absolute; inset: 0; background: rgba(7,14,26,0.85); }
     .services-inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     .services-left h2 { font-size: clamp(1.75rem,3vw,2.6rem); font-weight: 800; color: var(--white); margin-bottom: 1rem; }
@@ -54,6 +83,8 @@
     .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .service-box { border: 2px solid var(--border-gold); border-radius: 10px; padding: 1.5rem 1.25rem; color: var(--white); font-weight: 700; font-size: 1rem; line-height: 1.35; transition: background 0.2s; }
     .service-box:hover { background: rgba(218,154,64,0.12); }
+
+    /* PROCESS */
     .process { background: var(--off-white); padding: 6rem 2rem; }
     .process-header { text-align: center; max-width: 680px; margin: 0 auto 3.5rem; }
     .process-header h2 { font-size: clamp(1.75rem,3vw,2.5rem); font-weight: 800; color: var(--text-dark); margin-bottom: 0.75rem; }
@@ -63,6 +94,8 @@
     .process-card img { width: 56px; height: 56px; object-fit: contain; flex-shrink: 0; }
     .process-card h3 { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.4rem; }
     .process-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; }
+
+    /* PROJECTS */
     .projects { background: var(--white); padding: 6rem 2rem; }
     .projects-header { text-align: center; max-width: 600px; margin: 0 auto 3rem; }
     .projects-header h2 { font-size: clamp(1.75rem,3vw,2.5rem); font-weight: 800; color: var(--text-dark); margin-bottom: 0.75rem; }
@@ -70,6 +103,8 @@
     .projects-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
     .projects-grid img { width: 100%; height: 280px; object-fit: cover; border-radius: 6px; transition: transform 0.3s, box-shadow 0.3s; }
     .projects-grid img:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+    /* CTA */
     .cta-section { background: var(--navy); padding: 6rem 2rem; text-align: center; }
     .cta-section h2 { font-size: clamp(1.75rem,3vw,2.75rem); font-weight: 800; color: var(--white); margin-bottom: 1rem; }
     .cta-section p { color: rgba(255,255,255,0.8); font-size: 1.05rem; margin-bottom: 2.5rem; }
@@ -77,6 +112,8 @@
     .contact-info a { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--white); font-size: 1.05rem; font-weight: 600; border: 2px solid rgba(255,255,255,0.25); border-radius: 8px; padding: 0.85rem 2rem; transition: border-color 0.2s, background 0.2s; }
     .contact-info a:hover { border-color: var(--gold); background: rgba(218,154,64,0.1); }
     .contact-info svg { flex-shrink: 0; }
+
+    /* FOOTER */
     footer { background: var(--navy-dark); color: rgba(255,255,255,0.75); padding: 4rem 2rem 2rem; }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .footer-brand strong { display: block; color: var(--white); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
@@ -88,6 +125,8 @@
     .footer-col li a { font-size: 0.9rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
     .footer-col li a:hover { color: var(--gold); }
     .footer-bottom { max-width: 1200px; margin: 1.5rem auto 0; font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .about-inner, .services-inner { grid-template-columns: 1fr; }
       .about-image { order: -1; }
@@ -95,24 +134,24 @@
       .projects-grid { grid-template-columns: 1fr 1fr; }
       .footer-inner { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 768px) { .hero, .services { background-attachment: scroll; } }
+    @media (max-width: 768px) {
+      .hero, .services { background-attachment: scroll; 
+    }
+    }
     @media (max-width: 640px) {
-      .header-inner { flex-wrap: wrap; gap: 0.75rem; }
-      nav { gap: 1.25rem; flex-wrap: wrap; }
       .services-grid { grid-template-columns: 1fr; }
       .process-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
     }
-    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--text-dark);flex-shrink:0;line-height:1;}
-    @media(max-width:768px){
-      .nav-toggle{display:flex;align-items:center;margin-left:auto;}
-      .header-inner{position:relative;flex-wrap:nowrap;}
-      .btn-red{padding:.5rem .85rem;font-size:.75rem;}
-      nav{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--off-white);border-bottom:3px solid var(--gold);padding:1rem 2rem 1.5rem;gap:0;z-index:99;}
-      nav.open{display:flex;}
-      nav a{padding:.75rem 0;width:100%;border-bottom:1px solid #ebebeb;}
-      nav a:last-child{border-bottom:none;}
+
+    /* MOBILE NAV */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .header-cta { display: none; }
+      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--off-white); border-bottom: 2px solid var(--border-gold); flex-direction: column; align-items: stretch; gap: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      nav.open { display: flex; }
+      nav a { padding: 1rem 2rem; border-bottom: 1px solid #eee; font-size: 1rem; }
     }
   </style>
 </head>
@@ -122,17 +161,22 @@
       <a href="index.html" class="logo">
         <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/69766a20c1fa0c70709738b6.png" alt="Break Frame Construction logo">
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.closest('header').querySelector('nav').classList.toggle('open')"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-      <nav>
+      <nav id="main-nav">
         <a href="index.html" class="active">Home</a>
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="header-cta"><a href="tel:8175181642" class="btn-red">Free Estimate</a></div>
+      <div class="header-cta">
+        <a href="tel:8175181642" class="btn-red">Free Estimate</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
   <section class="hero">
     <div class="hero-content">
       <h1>Fort Worth Framing &amp; Specialty Trim Services</h1>
@@ -140,6 +184,7 @@
       <a href="tel:8175181642" class="btn-red">FREE ESTIMATE</a>
     </div>
   </section>
+
   <section class="about" id="about">
     <div class="about-inner">
       <div class="about-text">
@@ -149,11 +194,12 @@
         <a href="about.html" class="btn-gold-outline">About Our Work</a>
       </div>
       <div class="about-image">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg" alt="Break Frame Construction project">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg" alt="Break Frame Construction project â stone and metal roof exterior">
       </div>
     </div>
   </section>
-  <section class="services" id="services">
+
+  <section class="services">
     <div class="services-inner">
       <div class="services-left">
         <h2>Our Services</h2>
@@ -168,7 +214,8 @@
       </div>
     </div>
   </section>
-  <section class="process" id="process">
+
+  <section class="process">
     <div class="process-header">
       <span class="eyebrow">Our Process</span>
       <h2>How We Work</h2>
@@ -176,11 +223,11 @@
     </div>
     <div class="process-grid">
       <div class="process-card">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6977d0a229dcf57fc5963b9f.png" alt="Scope icon">
-        <div><h3>Scope &amp; Planning</h3><p>We ensure all projects are carried out with professionalism using quality materials and our qualified team.</p></div>
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6977d0a229dcf57fc5963b9f.png" alt="Scope &amp; Planning icon">
+        <div><h3>Scope &amp; Planning</h3><p>We ensure that all projects are carried out with the utmost professionalism using quality materials and by our qualified team.</p></div>
       </div>
       <div class="process-card">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6977d0a2b600b107b3421ef9.png" alt="Framing icon">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6977d0a2b600b107b3421ef9.png" alt="Precision Framing icon">
         <div><h3>Precision Framing</h3><p>Our team executes framing and trim with accuracy, consistency, and code compliance.</p></div>
       </div>
       <div class="process-card">
@@ -188,35 +235,44 @@
         <div><h3>Coordination</h3><p>We stay aligned with builders, trades, and schedules throughout the project.</p></div>
       </div>
       <div class="process-card">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6977d0a2b600b1a9b6421ef8.png" alt="Review icon">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6977d0a2b600b1a9b6421ef8.png" alt="Final Review icon">
         <div><h3>Final Review</h3><p>Work is reviewed for accuracy and finish quality before moving forward.</p></div>
       </div>
     </div>
   </section>
-  <section class="projects" id="projects">
+
+  <section class="projects">
     <div class="projects-header">
       <h2>Our Work</h2>
       <p>A sample of recent framing and exterior trim projects across the DFW area.</p>
     </div>
     <div class="projects-grid">
-      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6981130d3c458e46a4defece.jpeg" alt="Project 1">
-      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/698113031fd827b015c88981.jpeg" alt="Project 2">
-      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6981129f3c458e2367deed69.jpeg" alt="Project 3">
+      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6981130d3c458e46a4defece.jpeg" alt="Break Frame Construction project 1">
+      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/698113031fd827b015c88981.jpeg" alt="Break Frame Construction project 2">
+      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6981129f3c458e2367deed69.jpeg" alt="Break Frame Construction project 3">
     </div>
   </section>
-  <section class="cta-section" id="contact">
+
+  <section class="cta-section">
     <h2>Let's Talk About Your Project</h2>
     <p>We'll review your plans, timelines, and scope before moving forward.</p>
     <div class="contact-info">
-      <a href="tel:8175181642"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (817) 518-1642</a>
-      <a href="mailto:JR@Break-Frame.com"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> JR@Break-Frame.com</a>
+      <a href="tel:8175181642">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (817) 518-1642
+      </a>
+      <a href="mailto:JR@Break-Frame.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        JR@Break-Frame.com
+      </a>
     </div>
   </section>
+
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
         <strong>Break Frame Construction</strong>
-        <p class="tagline">Precision framing &amp; exterior trim &mdash; Fort Worth, TX</p>
+        <p class="tagline">Precision framing &amp; exterior trim â Fort Worth, TX</p>
         <a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a>
         <a href="tel:8175181642">(817) 518-1642</a>
       </div>
@@ -240,5 +296,22 @@
     </div>
     <div class="footer-bottom">&copy; 2026 Break Frame Construction &middot; Fort Worth, TX &middot; All Rights Reserved</div>
   </footer>
+  <script>
+    (function() {
+      var btn = document.getElementById('hamburger');
+      var nav = document.getElementById('main-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function() {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('header')) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
