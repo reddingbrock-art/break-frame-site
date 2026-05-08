@@ -1,194 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<title>About | Break Frame Construction</title>
-<meta name="description" content="Meet Joel Rodriguez, owner of Break Frame Construction — precision framing and exterior trim across Fort Worth and DFW.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--gold:#DA9A40;--navy:#0B2147;--navy-dark:#070E1A;--navy-medium:#0B1F3B;--red:#B1120A;--off-white:#F9F9F9;--white:#ffffff;--text-dark:#0B1F3B;--text-mid:#545250;--border-gold:rgba(218,154,64,0.7);}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'Montserrat',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.6;}
-img{max-width:100%;display:block;}
-a{text-decoration:none;color:inherit;}
-ul{list-style:none;}
-.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
-.btn-red{display:inline-block;background:var(--red);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.85rem 2rem;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;}
-.btn-red:hover{background:#8f0e08;}
-.btn-gold-outline{display:inline-block;background:transparent;color:var(--gold);font-family:'Montserrat',sans-serif;font-weight:600;font-size:0.9rem;padding:0.75rem 1.75rem;border:2px solid var(--gold);border-radius:4px;cursor:pointer;transition:background 0.2s,color 0.2s;}
-.btn-gold-outline:hover{background:var(--gold);color:var(--white);}
-.eyebrow{display:block;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;}
-header{position:sticky;top:0;z-index:100;background:var(--off-white);border-bottom:1px solid #e5e5e5;}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 2rem;max-width:1400px;margin:0 auto;}
-.logo{display:flex;align-items:center;gap:0.75rem;}
-.logo img{height:56px;width:auto;}
-nav{display:flex;align-items:center;gap:2.5rem;}
-nav a{font-weight:500;font-size:1rem;color:var(--text-dark);transition:color 0.2s;}
-nav a:hover,nav a.active{color:var(--gold);}
-.header-cta{flex-shrink:0;}
-.page-hero{position:relative;min-height:320px;display:flex;align-items:center;background-image:url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg');background-size:cover;background-position:center;background-attachment:fixed;}
-.page-hero::before{content:'';position:absolute;inset:0;background:rgba(7,14,26,0.68);}
-.page-hero-content{position:relative;z-index:1;padding:4rem 2rem 4rem 6rem;}
-.page-hero-content h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--white);line-height:1.15;}
-.page-hero-content p{font-size:1.05rem;color:rgba(255,255,255,0.82);margin-top:0.75rem;max-width:540px;}
-.bio{padding:6rem 2rem;background:var(--white);}
-.bio-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.bio-image img{width:100%;height:480px;object-fit:cover;border-radius:4px;}
-.bio-text .eyebrow{margin-bottom:0.5rem;}
-.bio-text h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:var(--text-dark);line-height:1.2;margin-bottom:1.25rem;}
-.bio-text p{font-size:1rem;color:var(--text-mid);line-height:1.8;margin-bottom:1.25rem;}
-.values{background:var(--off-white);padding:6rem 2rem;}
-.values-header{text-align:center;max-width:640px;margin:0 auto 3.5rem;}
-.values-header h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:var(--text-dark);margin-bottom:0.75rem;}
-.values-header p{color:var(--text-mid);font-size:1rem;line-height:1.7;}
-.values-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.value-card{background:var(--white);border:2px solid var(--border-gold);border-radius:10px;padding:2rem 1.75rem;}
-.value-card h3{font-size:1.05rem;font-weight:700;color:var(--text-dark);margin-bottom:0.75rem;}
-.value-card p{font-size:0.9rem;color:var(--text-mid);line-height:1.7;}
-.value-icon{font-size:2rem;margin-bottom:1rem;}
-.creds{background:var(--navy);padding:3.5rem 2rem;}
-.creds-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:2rem;}
-.cred-item{text-align:center;color:var(--white);}
-.cred-item strong{display:block;font-size:1.75rem;font-weight:800;color:var(--gold);}
-.cred-item span{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.75);}
-.cta-section{background:var(--navy-medium);padding:6rem 2rem;text-align:center;}
-.cta-section h2{font-size:clamp(1.75rem,3vw,2.75rem);font-weight:800;color:var(--white);margin-bottom:1rem;}
-.cta-section p{color:rgba(255,255,255,0.8);font-size:1.05rem;margin-bottom:2.5rem;}
-.contact-info{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;}
-.contact-info a{display:inline-flex;align-items:center;gap:0.6rem;color:var(--white);font-size:1.05rem;font-weight:600;border:2px solid rgba(255,255,255,0.25);border-radius:8px;padding:0.85rem 2rem;transition:border-color 0.2s,background 0.2s;}
-.contact-info a:hover{border-color:var(--gold);background:rgba(218,154,64,0.1);}
-footer{background:var(--navy-dark);color:rgba(255,255,255,0.75);padding:4rem 2rem 2rem;}
-.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.1);}
-.footer-brand strong{display:block;color:var(--white);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;}
-.footer-brand .tagline{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:1.25rem;}
-.footer-brand a{display:block;color:var(--gold);font-size:0.9rem;margin-bottom:0.4rem;transition:color 0.2s;}
-.footer-brand a:hover{color:var(--white);}
-.footer-col h4{color:var(--white);font-size:0.95rem;font-weight:700;margin-bottom:1.25rem;}
-.footer-col li{margin-bottom:0.65rem;}
-.footer-col li a{font-size:0.9rem;color:rgba(255,255,255,0.65);transition:color 0.2s;}
-.footer-col li a:hover{color:var(--gold);}
-.footer-bottom{max-width:1200px;margin:1.5rem auto 0;font-size:0.82rem;color:rgba(255,255,255,0.4);}
-@media(max-width:900px){.bio-inner{grid-template-columns:1fr;}.bio-image{order:-1;}.page-hero-content{padding:3rem 1.5rem;}.values-grid{grid-template-columns:1fr 1fr;}.footer-inner{grid-template-columns:1fr 1fr;}}
-@media(max-width:768px){.page-hero{background-attachment:scroll;}}
-@media(max-width:640px){.header-inner{flex-wrap:wrap;gap:0.75rem;}nav{gap:1.25rem;flex-wrap:wrap;}.values-grid{grid-template-columns:1fr;}.footer-inner{grid-template-columns:1fr;}}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>About | Break Frame Construction</title>
+  <meta name="description" content="Learn about Break Frame Construction â owned and operated by Joel Rodriguez, a Fort Worth framing contractor with over 10 years of experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>:root {
+      --gold: #DA9A40; --navy: #0B2147; --navy-dark: #070E1A;
+      --navy-medium: #0B1F3B; --red: #B1120A; --off-white: #F9F9F9;
+      --white: #ffffff; --text-dark: #0B1F3B; --text-mid: #545250;
+      --border-gold: rgba(218,154,64,0.7);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
 
+    .btn-red { display: inline-block; background: var(--red); color: var(--white); font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.85rem 2rem; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-red:hover { background: #8f0e08; }
+    .eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+
+    /* HEADER */
+    header { position: sticky; top: 0; z-index: 100; background: var(--off-white); border-bottom: 1px solid #e5e5e5; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 2rem; max-width: 1400px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; }
+    .logo img { height: 56px; width: auto; }
+    nav { display: flex; align-items: center; gap: 2.5rem; }
+    nav a { font-weight: 500; font-size: 1rem; color: var(--text-dark); transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .header-cta { flex-shrink: 0; }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 25px; height: 2px; background: var(--text-dark); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+
+    /* PAGE HERO */
+    .page-hero {
+      position: relative;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      background-image: url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/697683d529dcf572b65be695.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: rgba(7,14,26,0.72); }
+    .page-hero-content { position: relative; z-index: 1; padding: 4rem 2rem 4rem 6rem; }
+    .page-hero-content h1 { font-size: clamp(2rem,4vw,3rem); font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 0.75rem; }
+    .page-hero-content p { font-size: 1.05rem; color: rgba(255,255,255,0.85); max-width: 540px; }
+
+    /* INTRO */
+    .about-intro { background: var(--white); padding: 5rem 2rem; }
+    .about-intro .inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .about-intro img { width: 100%; height: 440px; object-fit: cover; border-radius: 6px; }
+    .about-text h2 { font-size: clamp(1.75rem,3vw,2.5rem); font-weight: 800; color: var(--text-dark); margin-bottom: 1.25rem; line-height: 1.2; }
+    .about-text p { color: var(--text-mid); line-height: 1.8; margin-bottom: 1.25rem; font-size: 0.97rem; }
+
+    /* VALUES */
+    .values-section { background: var(--off-white); padding: 5rem 2rem; }
+    .values-section .inner { max-width: 1100px; margin: 0 auto; }
+    .values-section h2 { font-size: clamp(1.5rem,3vw,2.25rem); font-weight: 800; color: var(--text-dark); margin-bottom: 2.5rem; text-align: center; }
+    .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .value-card { background: var(--white); border: 2px solid var(--border-gold); border-radius: 10px; padding: 2rem; }
+    .value-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.6rem; }
+    .value-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
+
+    /* CREDENTIALS */
+    .credentials { background: var(--navy); padding: 3.5rem 2rem; }
+    .cred-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; text-align: center; }
+    .cred-item strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--gold); margin-bottom: 0.3rem; }
+    .cred-item span { font-size: 0.88rem; color: rgba(255,255,255,0.75); }
+
+    /* CTA */
+    .cta-section { padding: 5rem 2rem; text-align: center; background: var(--white); }
+    .cta-section h2 { font-size: clamp(1.5rem,3vw,2.25rem); font-weight: 800; color: var(--text-dark); margin-bottom: 1rem; }
+    .cta-section p { color: var(--text-mid); margin-bottom: 2rem; }
+    .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .contact-info a { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--white); background: var(--navy); font-size: 1.05rem; font-weight: 600; border-radius: 8px; padding: 0.85rem 2rem; transition: background 0.2s; }
+    .contact-info a:hover { background: var(--navy-dark); }
+    .contact-info svg { flex-shrink: 0; }
+
+    /* FOOTER */
+    footer { background: var(--navy-dark); color: rgba(255,255,255,0.75); padding: 4rem 2rem 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-brand strong { display: block; color: var(--white); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .footer-brand .tagline { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .footer-brand a { display: block; color: var(--gold); font-size: 0.9rem; margin-bottom: 0.4rem; }
+    .footer-brand a:hover { color: var(--white); }
+    .footer-col h4 { color: var(--white); font-size: 0.95rem; font-weight: 700; margin-bottom: 1.25rem; }
+    .footer-col li { margin-bottom: 0.65rem; }
+    .footer-col li a { font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+    .footer-col li a:hover { color: var(--gold); }
+    .footer-bottom { max-width: 1200px; margin: 1.5rem auto 0; font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+
+    @media (max-width: 900px) {
+      .page-hero-content { padding: 3rem 1.5rem; }
+      .about-intro .inner { grid-template-columns: 1fr; }
+      .about-intro img { height: 300px; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .cred-inner { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) { .page-hero { background-attachment: scroll; 
+    } }
+    @media (max-width: 640px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .cred-inner { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+
+    /* MOBILE NAV */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .header-cta { display: none; }
+      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--off-white); border-bottom: 2px solid var(--border-gold); flex-direction: column; align-items: stretch; gap: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      nav.open { display: flex; }
+      nav a { padding: 1rem 2rem; border-bottom: 1px solid #eee; font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/69766a20c1fa0c70709738b6.png" alt="Break Frame Construction logo">
-    </a>
-.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--text-dark);flex-shrink:0;line-height:1;}@media(max-width:768px){.nav-toggle{display:flex;align-items:center;margin-left:auto;}.header-inner{position:relative;flex-wrap:nowrap;}.btn-red{padding:.5rem .85rem;font-size:.75rem;}nav{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--off-white);border-bottom:3px solid var(--gold);padding:1rem 2rem 1.5rem;gap:0;z-index:99;}nav.open{display:flex;}nav a{padding:.75rem 0;width:100%;border-bottom:1px solid #ebebeb;}nav a:last-child{border-bottom:none;}}</style>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="header-cta"><a href="tel:8175181642" class="btn-red">Free Estimate</a></div>
-  </div>
-</header>
-<section class="page-hero">
-  <div class="page-hero-content">
-    <span class="eyebrow">Our Story</span>
-    <h1>About Break Frame Construction</h1>
-    <p>A Fort Worth framing company built on precision, reliability, and honest work.</p>
-  </div>
-</section>
-<section class="bio">
-  <div class="bio-inner">
-    <div class="bio-image">
-      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg" alt="Break Frame Construction project">
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/69766a20c1fa0c70709738b6.png" alt="Break Frame Construction logo">
+      </a>
+      <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:8175181642" class="btn-red">Free Estimate</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="bio-text">
-      <span class="eyebrow">Meet the Owner</span>
-      <h2>Joel Rodriguez</h2>
-      <p>Joel Rodriguez founded Break Frame Construction with one goal: deliver framing and exterior work that holds up — structurally and under scrutiny. With over 10 years of hands-on experience in the construction industry, Joel has built a reputation for precision craftsmanship and dependable execution.</p>
-      <p>Based in Fort Worth and serving the broader DFW area, Break Frame Construction works with homebuilders, general contractors, and property managers who need a framing crew they can count on to show up, stay on schedule, and do the work right.</p>
-      <p>From new construction framing to specialty trim and exterior siding, every project is treated with the same level of care — whether it's a single-family home or a large commercial build.</p>
-      <a href="contact.html" class="btn-gold-outline">Get a Free Estimate</a>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="eyebrow">About Break Frame Construction</span>
+      <h1>Built on Experience<br>and Trust</h1>
+      <p>A Fort Worthâbased framing and exterior trim company known for clear communication, quality workmanship, and getting the job done on time.</p>
     </div>
-  </div>
-</section>
-<section class="values">
-  <div class="values-header">
-    <span class="eyebrow">What We Stand For</span>
-    <h2>Our Commitments</h2>
-    <p>Three principles that guide how we work on every job site.</p>
-  </div>
-  <div class="values-grid">
-    <div class="value-card">
-      <div class="value-icon">🗣️</div>
-      <h3>Clear Communication</h3>
-      <p>We keep builders, GCs, and clients in the loop — no surprises, no chasing us down for updates. You'll always know where the job stands.</p>
+  </section>
+
+  <section class="about-intro">
+    <div class="inner">
+      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg" alt="Break Frame Construction â stone and metal roof exterior">
+      <div class="about-text">
+        <span class="eyebrow">Meet the Owner</span>
+        <h2>Joel Rodriguez</h2>
+        <p>Break Frame Construction is owned and operated by Joel Rodriguez, a hands-on builder with over 10 years of construction experience. Joel grew up around construction and learned framing and carpentry through years of real job-site work, developing a strong understanding of how projects should be built from the ground up.</p>
+        <p>Over the past decade, Joel has worked on a wide range of residential projects, gaining experience not only in the physical work but also in planning, coordination, and problem-solving on site. He believes quality construction comes from clear communication, attention to detail, and taking responsibility for every phase of the job.</p>
+        <p>Joel's goal is to provide dependable, straightforward service â no guesswork, no delays, just solid work done right.</p>
+      </div>
     </div>
-    <div class="value-card">
-      <div class="value-icon">🔨</div>
-      <h3>Quality Workmanship</h3>
-      <p>Framing done right means fewer problems downstream. We take pride in our work and hold ourselves to a higher standard than the minimum.</p>
+  </section>
+
+  <section class="values-section">
+    <div class="inner">
+      <span class="eyebrow" style="text-align:center; display:block;">How We Operate</span>
+      <h2>What Sets Us Apart</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>Clear Communication</h3>
+          <p>We keep builders, developers, and property managers informed at every stage. No surprises, no assumptions.</p>
+        </div>
+        <div class="value-card">
+          <h3>Quality Workmanship</h3>
+          <p>Every cut, every frame, every trim piece is executed with precision. We don't cut corners on craft.</p>
+        </div>
+        <div class="value-card">
+          <h3>On-Time Execution</h3>
+          <p>We respect your schedule and coordinate tightly with other trades to keep projects moving forward.</p>
+        </div>
+      </div>
     </div>
-    <div class="value-card">
-      <div class="value-icon">📅</div>
-      <h3>On-Time Execution</h3>
-      <p>Schedules matter in construction. We coordinate with your timeline and show up ready to work — because delays cost everyone money.</p>
-    </div>
-  </div>
-</section>
-<section class="creds">
-  <div class="creds-inner">
-    <div class="cred-item"><strong>10+</strong><span>Years Experience</span></div>
-    <div class="cred-item"><strong>✓</strong><span>Licensed &amp; Insured</span></div>
-    <div class="cred-item"><strong>DFW</strong><span>Service Area</span></div>
-    <div class="cred-item"><strong>100%</strong><span>Satisfaction Focus</span></div>
-  </div>
-</section>
-<section class="cta-section">
-  <h2>Ready to Start Your Project?</h2>
-  <p>Call or email us to discuss your scope — no pressure, just a straight conversation.</p>
-  <div class="contact-info">
-    <a href="tel:8175181642">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      (817) 518-1642
-    </a>
-    <a href="mailto:JR@Break-Frame.com">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      JR@Break-Frame.com
-    </a>
-  </div>
-</section>
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <strong>Break Frame Construction</strong>
-      <p class="tagline">Precision framing &amp; exterior trim — Fort Worth, TX</p>
-      <a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a>
-      <a href="tel:8175181642">(817) 518-1642</a>
-    </div>
-    <div class="footer-col">
-      <h4>Menu</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:8175181642">(817) 518-1642</a></li>
-        <li><a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a></li>
-      </ul>
+  </section>
+
+  <div class="credentials">
+    <div class="cred-inner">
+      <div class="cred-item"><strong>10+</strong><span>Years of Experience</span></div>
+      <div class="cred-item"><strong>Licensed</strong><span>&amp; Fully Insured</span></div>
+      <div class="cred-item"><strong>DFW</strong><span>Fort Worth &amp; Dallas Area</span></div>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 Break Frame Construction &middot; Fort Worth, TX &middot; All Rights Reserved</div>
-</footer>
+
+  <section class="cta-section">
+    <span class="eyebrow">Work With Us</span>
+    <h2>Let's Build Something Right</h2>
+    <p>Call or email to discuss your project details.</p>
+    <div class="contact-info">
+      <a href="tel:8175181642">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (817) 518-1642
+      </a>
+      <a href="mailto:JR@Break-Frame.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        JR@Break-Frame.com
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Break Frame Construction</strong>
+        <p class="tagline">Precision framing &amp; exterior trim â Fort Worth, TX</p>
+        <a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a>
+        <a href="tel:8175181642">(817) 518-1642</a>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8175181642">(817) 518-1642</a></li>
+          <li><a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Break Frame Construction &middot; Fort Worth, TX &middot; All Rights Reserved</div>
+  </footer>
+  <script>
+    (function() {
+      var btn = document.getElementById('hamburger');
+      var nav = document.getElementById('main-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function() {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('header')) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
