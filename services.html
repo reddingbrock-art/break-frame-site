@@ -9,76 +9,136 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --gold:#DA9A40;--navy:#0B2147;--navy-dark:#070E1A;--navy-medium:#0B1F3B;--red:#B1120A;--off-white:#F9F9F9;--white:#ffffff;--text-dark:#0B1F3B;--text-mid:#545250;--border-gold:rgba(218,154,64,0.7); }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
-    body{font-family:'Montserrat',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.6;}
-    img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}ul{list-style:none;}
-    .btn-red{display:inline-block;background:var(--red);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.85rem 2rem;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;}
-    .btn-red:hover{background:#8f0e08;}
-    .eyebrow{display:block;font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;}
-    header{position:sticky;top:0;z-index:100;background:var(--off-white);border-bottom:1px solid #e5e5e5;}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 2rem;max-width:1400px;margin:0 auto;}
-    .logo img{height:56px;width:auto;}
-    nav{display:flex;align-items:center;gap:2.5rem;}
-    nav a{font-weight:500;font-size:1rem;color:var(--text-dark);transition:color 0.2s;}
-    nav a:hover,nav a.active{color:var(--gold);}
-    .header-cta{flex-shrink:0;}
-    .page-hero{position:relative;min-height:340px;display:flex;align-items:center;background-image:url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/6976a224a87bebcc83e2f9ab.jpeg');background-size:cover;background-position:center;background-attachment:fixed;}
-    .page-hero::before{content:'';position:absolute;inset:0;background:rgba(7,14,26,0.72);}
-    .page-hero-content{position:relative;z-index:1;padding:4rem 2rem 4rem 6rem;}
-    .page-hero-content h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:0.75rem;}
-    .page-hero-content p{font-size:1.05rem;color:rgba(255,255,255,0.85);max-width:540px;}
-    .services-section{padding:5rem 2rem;background:var(--white);}
-    .services-section .inner{max-width:1100px;margin:0 auto;}
-    .service-card{display:grid;grid-template-columns:80px 1fr;gap:2rem;align-items:start;border-bottom:1px solid #eee;padding:2.5rem 0;}
-    .service-card:last-child{border-bottom:none;}
-    .service-number{font-size:2.5rem;font-weight:800;color:var(--gold);line-height:1;}
-    .service-card h3{font-size:1.35rem;font-weight:700;color:var(--text-dark);margin-bottom:0.75rem;}
-    .service-card p{color:var(--text-mid);line-height:1.75;font-size:0.97rem;}
-    .why-strip{background:var(--navy);padding:3.5rem 2rem;}
-    .why-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
-    .why-item{text-align:center;color:var(--white);}
-    .why-item strong{display:block;font-size:1.5rem;font-weight:800;color:var(--gold);margin-bottom:0.4rem;}
-    .why-item span{font-size:0.9rem;color:rgba(255,255,255,0.75);}
-    .cta-section{background:var(--off-white);padding:5rem 2rem;text-align:center;}
-    .cta-section h2{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:var(--text-dark);margin-bottom:1rem;}
-    .cta-section p{color:var(--text-mid);margin-bottom:2rem;}
-    .contact-info{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;}
-    .contact-info a{display:inline-flex;align-items:center;gap:0.6rem;color:var(--white);background:var(--navy);font-size:1.05rem;font-weight:600;border-radius:8px;padding:0.85rem 2rem;transition:background 0.2s;}
-    .contact-info a:hover{background:var(--navy-dark);}
-    .contact-info svg{flex-shrink:0;}
-    footer{background:var(--navy-dark);color:rgba(255,255,255,0.75);padding:4rem 2rem 2rem;}
-    .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.1);}
-    .footer-brand strong{display:block;color:var(--white);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;}
-    .footer-brand .tagline{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:1.25rem;}
-    .footer-brand a{display:block;color:var(--gold);font-size:0.9rem;margin-bottom:0.4rem;}
-    .footer-brand a:hover{color:var(--white);}
-    .footer-col h4{color:var(--white);font-size:0.95rem;font-weight:700;margin-bottom:1.25rem;}
-    .footer-col li{margin-bottom:0.65rem;}
-    .footer-col li a{font-size:0.9rem;color:rgba(255,255,255,0.65);}
-    .footer-col li a:hover{color:var(--gold);}
-    .footer-bottom{max-width:1200px;margin:1.5rem auto 0;font-size:0.82rem;color:rgba(255,255,255,0.4);}
-    @media(max-width:900px){.page-hero-content{padding:3rem 1.5rem;}.why-inner{grid-template-columns:1fr 1fr;}.footer-inner{grid-template-columns:1fr 1fr;}}
-    @media(max-width:768px){.page-hero{background-attachment:scroll;}}
-    @media(max-width:640px){.header-inner{flex-wrap:wrap;gap:0.75rem;}nav{gap:1.25rem;flex-wrap:wrap;}.service-card{grid-template-columns:1fr;gap:0.5rem;}.why-inner{grid-template-columns:1fr;}.footer-inner{grid-template-columns:1fr;}}
-  
+  <style>:root {
+      --gold: #DA9A40; --navy: #0B2147; --navy-dark: #070E1A;
+      --navy-medium: #0B1F3B; --red: #B1120A; --off-white: #F9F9F9;
+      --white: #ffffff; --text-dark: #0B1F3B; --text-mid: #545250;
+      --border-gold: rgba(218,154,64,0.7);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .btn-red { display: inline-block; background: var(--red); color: var(--white); font-family: 'Montserrat',sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.85rem 2rem; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-red:hover { background: #8f0e08; }
+    .eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+
+    /* HEADER */
+    header { position: sticky; top: 0; z-index: 100; background: var(--off-white); border-bottom: 1px solid #e5e5e5; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 2rem; max-width: 1400px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; }
+    .logo img { height: 56px; width: auto; }
+    nav { display: flex; align-items: center; gap: 2.5rem; }
+    nav a { font-weight: 500; font-size: 1rem; color: var(--text-dark); transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--gold); }
+    .header-cta { flex-shrink: 0; }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 25px; height: 2px; background: var(--text-dark); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+
+    /* PAGE HERO */
+    .page-hero {
+      position: relative;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      background-image: url('https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/697683d529dcf572b65be695.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: rgba(7,14,26,0.72); }
+    .page-hero-content { position: relative; z-index: 1; padding: 4rem 2rem 4rem 6rem; }
+    .page-hero-content h1 { font-size: clamp(2rem,4vw,3rem); font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 0.75rem; }
+    .page-hero-content p { font-size: 1.05rem; color: rgba(255,255,255,0.85); max-width: 540px; }
+
+    /* SERVICES LIST */
+    .services-section { padding: 5rem 2rem; background: var(--white); }
+    .services-section .inner { max-width: 1100px; margin: 0 auto; }
+    .services-section h2 { font-size: clamp(1.5rem,3vw,2.25rem); font-weight: 800; color: var(--text-dark); margin-bottom: 1rem; }
+    .service-card { display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start; border-bottom: 1px solid #eee; padding: 2.5rem 0; }
+    .service-card:last-child { border-bottom: none; }
+    .service-number { font-size: 2.5rem; font-weight: 800; color: var(--gold); line-height: 1; }
+    .service-card h3 { font-size: 1.35rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.75rem; }
+    .service-card p { color: var(--text-mid); line-height: 1.75; font-size: 0.97rem; }
+
+    /* WHY US STRIP */
+    .why-strip { background: var(--navy); padding: 3.5rem 2rem; }
+    .why-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
+    .why-item { text-align: center; color: var(--white); }
+    .why-item strong { display: block; font-size: 1.5rem; font-weight: 800; color: var(--gold); margin-bottom: 0.4rem; }
+    .why-item span { font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+
+    /* CTA */
+    .cta-section { background: var(--off-white); padding: 5rem 2rem; text-align: center; }
+    .cta-section h2 { font-size: clamp(1.5rem,3vw,2.25rem); font-weight: 800; color: var(--text-dark); margin-bottom: 1rem; }
+    .cta-section p { color: var(--text-mid); margin-bottom: 2rem; }
+    .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .contact-info a { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--white); background: var(--navy); font-size: 1.05rem; font-weight: 600; border-radius: 8px; padding: 0.85rem 2rem; transition: background 0.2s; }
+    .contact-info a:hover { background: var(--navy-dark); }
+    .contact-info svg { flex-shrink: 0; }
+
+    /* FOOTER */
+    footer { background: var(--navy-dark); color: rgba(255,255,255,0.75); padding: 4rem 2rem 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-brand strong { display: block; color: var(--white); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .footer-brand .tagline { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .footer-brand a { display: block; color: var(--gold); font-size: 0.9rem; margin-bottom: 0.4rem; }
+    .footer-brand a:hover { color: var(--white); }
+    .footer-col h4 { color: var(--white); font-size: 0.95rem; font-weight: 700; margin-bottom: 1.25rem; }
+    .footer-col li { margin-bottom: 0.65rem; }
+    .footer-col li a { font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+    .footer-col li a:hover { color: var(--gold); }
+    .footer-bottom { max-width: 1200px; margin: 1.5rem auto 0; font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+
+    @media (max-width: 900px) {
+      .page-hero-content { padding: 3rem 1.5rem; }
+      .why-inner { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) { .page-hero { background-attachment: scroll; 
+    } }
+    @media (max-width: 640px) {
+      .service-card { grid-template-columns: 1fr; gap: 0.5rem; }
+      .service-number { font-size: 1.75rem; }
+      .why-inner { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+
+    /* MOBILE NAV */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .header-cta { display: none; }
+      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--off-white); border-bottom: 2px solid var(--border-gold); flex-direction: column; align-items: stretch; gap: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      nav.open { display: flex; }
+      nav a { padding: 1rem 2rem; border-bottom: 1px solid #eee; font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <a href="index.html" class="logo"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/69766a20c1fa0c70709738b6.png" alt="Break Frame Construction logo"></a>
-  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--text-dark);flex-shrink:0;line-height:1;}@media(max-width:768px){.nav-toggle{display:flex;align-items:center;margin-left:auto;}.header-inner{position:relative;flex-wrap:nowrap;}.btn-red{padding:.5rem .85rem;font-size:.75rem;}nav{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--off-white);border-bottom:3px solid var(--gold);padding:1rem 2rem 1.5rem;gap:0;z-index:99;}nav.open{display:flex;}nav a{padding:.75rem 0;width:100%;border-bottom:1px solid #ebebeb;}nav a:last-child{border-bottom:none;}}</style>
+      <a href="index.html" class="logo">
+        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/s4Vfl8Q0hBt0Eh0wjHtC/media/69766a20c1fa0c70709738b6.png" alt="Break Frame Construction logo">
+      </a>
+      <nav id="main-nav">
         <a href="index.html">Home</a>
         <a href="services.html" class="active">Services</a>
         <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="header-cta"><a href="tel:8175181642" class="btn-red">Free Estimate</a></div>
+      <div class="header-cta">
+        <a href="tel:8175181642" class="btn-red">Free Estimate</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
   <section class="page-hero">
     <div class="page-hero-content">
       <span class="eyebrow">What We Do</span>
@@ -86,26 +146,40 @@
       <p>Professional framing, exterior trim, custom work, and more for builders and property managers across Dallas Fort Worth.</p>
     </div>
   </section>
+
   <section class="services-section">
     <div class="inner">
       <div class="service-card">
         <div class="service-number">01</div>
-        <div><h3>New Construction Design &amp; Build</h3><p>We specialize in design-build construction for new residential and custom home projects. Whether traditional, metal-built, or renovation-driven, each build is approached with structural intent and long-term performance in mind.</p></div>
+        <div>
+          <h3>New Construction Design &amp; Build</h3>
+          <p>We specialize in design-build construction for new residential and custom home projects. Whether traditional, metal-built, or renovation-driven, each build is approached with structural intent and long-term performance in mind.</p>
+        </div>
       </div>
       <div class="service-card">
         <div class="service-number">02</div>
-        <div><h3>Specialty Framing &amp; Custom Homes</h3><p>Specialty framing for custom homes and advanced residential builds. Designed and built with structural precision across all designs, metal buildings, and renovation projects.</p></div>
+        <div>
+          <h3>Specialty Framing &amp; Custom Homes</h3>
+          <p>Specialty framing for custom homes and advanced residential builds. Designed and built with structural precision across all designs, metal buildings, and renovation projects.</p>
+        </div>
       </div>
       <div class="service-card">
         <div class="service-number">03</div>
-        <div><h3>Structural &amp; Wood Features</h3><p>Structural and wood features for residential and outdoor applications, including decks, fencing, barns, sheds, and custom elements. Built for durability, proper load handling where required, and long-term performance.</p></div>
+        <div>
+          <h3>Structural &amp; Wood Features</h3>
+          <p>Structural and wood features for residential and outdoor applications, including decks, fencing, barns, sheds, and custom elements. Built for durability, proper load handling where required, and long-term performance.</p>
+        </div>
       </div>
       <div class="service-card">
         <div class="service-number">04</div>
-        <div><h3>Exterior Trim &amp; Siding</h3><p>Exterior trim and siding installation for residential and commercial projects. Precision cuts, clean lines, and weather-tight execution on every job.</p></div>
+        <div>
+          <h3>Exterior Trim &amp; Siding</h3>
+          <p>Exterior trim and siding installation for residential and commercial projects. Precision cuts, clean lines, and weather-tight execution on every job.</p>
+        </div>
       </div>
     </div>
   </section>
+
   <div class="why-strip">
     <div class="why-inner">
       <div class="why-item"><strong>10+</strong><span>Years of Experience</span></div>
@@ -113,22 +187,67 @@
       <div class="why-item"><strong>DFW</strong><span>Fort Worth &amp; Dallas Area</span></div>
     </div>
   </div>
+
   <section class="cta-section">
     <span class="eyebrow">Get in Touch</span>
     <h2>Ready to Start Your Project?</h2>
     <p>Call or email us to discuss your plans, timeline, and scope.</p>
     <div class="contact-info">
-      <a href="tel:8175181642"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(817) 518-1642</a>
-      <a href="mailto:JR@Break-Frame.com"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>JR@Break-Frame.com</a>
+      <a href="tel:8175181642">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (817) 518-1642
+      </a>
+      <a href="mailto:JR@Break-Frame.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        JR@Break-Frame.com
+      </a>
     </div>
   </section>
+
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand"><strong>Break Frame Construction</strong><p class="tagline">Precision framing &amp; exterior trim — Fort Worth, TX</p><a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a><a href="tel:8175181642">(817) 518-1642</a></div>
-      <div class="footer-col"><h4>Menu</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8175181642">(817) 518-1642</a></li><li><a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a></li></ul></div>
+      <div class="footer-brand">
+        <strong>Break Frame Construction</strong>
+        <p class="tagline">Precision framing &amp; exterior trim â Fort Worth, TX</p>
+        <a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a>
+        <a href="tel:8175181642">(817) 518-1642</a>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8175181642">(817) 518-1642</a></li>
+          <li><a href="mailto:JR@Break-Frame.com">JR@Break-Frame.com</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">&copy; 2026 Break Frame Construction &middot; Fort Worth, TX &middot; All Rights Reserved</div>
   </footer>
+  <script>
+    (function() {
+      var btn = document.getElementById('hamburger');
+      var nav = document.getElementById('main-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function() {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('header')) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
